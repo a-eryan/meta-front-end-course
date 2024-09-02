@@ -1,0 +1,74 @@
+/* To center the logo inside the <header>, you need to apply the centering styles to the image itself, not just the header element.  */
+header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+nav li {
+    display: inline-block;
+    font-size: large;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+body {
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: large;
+    background-color: #f2f1ef;
+    padding: 2.5%;
+}
+
+h1 { /*Announcement element*/
+    font-weight: 800;
+    text-align: center;
+}
+
+h2 { /*Info element*/
+    text-align: center;
+}
+
+.InfoContainer{
+    display: flex;
+    /*flex-direction is automatically set to row*/
+    background-color: yellowgreen;
+    align-items: center;
+    justify-content: space-around; 
+    flex: 1;
+    padding: 3vh;
+}
+
+.InfoContainer img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40vh; 
+    height: 40vh; 
+    object-fit: cover; /* This ensures the image covers the box without distorting */
+}
+
+.InfoContainer p {
+    min-height: 25vh; /*This ensures that all containers are the same height regardless of the amount of content, which keeps them aligned. */
+    padding: 3%;
+}
+.InfoContainer h3 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
+    
+}
+footer {
+    display: flex;
+    flex: 1;
+}
+
+/*Responsive Flexbox for Devices */
+@media (max-width: 900px) {
+    .InfoContainer{
+      flex-direction: column;
+    }
+  }
