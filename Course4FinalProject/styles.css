@@ -29,11 +29,14 @@ nav ul {
 
 /* Ensure the nav-icon class styles the icons properly */
 .nav-icon {
-    width: 20px; /* Adjust the size as needed */
+    width: 14.3px; /*Exact Proportion*/
     height: auto;
     vertical-align: middle; /* Align the icon with the text */
     margin-right: 5px; /* Space between the icon and the text */
+    filter: invert(30%) sepia(90%) saturate(4000%) hue-rotate(350deg) brightness(70%) contrast(85%);
 }
+
+
 
 nav li {
     padding: 10px; /* Add padding for better clickability */
@@ -55,126 +58,14 @@ nav li a {
 nav li a:hover {
     background-color: #a7382d;
     color: #f2f1ef;
-    border: 2px solid #f2f1ef; /* Change the border color on hover */
-    cursor: pointer; /* Change the cursor to a pointer when hovering over the button */
-    border-radius: 10px; /* Ensure border radius is consistent */
-}
-
-.SideButtons {
-    background-color: #f2f1ef;
-    border-radius: 10px;
-    color: #a7382d;
-    border: 2px solid #a7382d;
-    text-align: center;
-    float: right;
-    font-family: "EB Garamond", serif;
-    font-size: large;
-    padding: 10px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    gap: 5px;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */    header img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        filter: invert(100%);
-    }
-    
-    nav {
-        background-color: #a7382d;
-        width: 100%;
-        padding: 10px;
-        justify-content: space-between;
-        box-sizing: content-box;
-    }
-    
-    nav ul {
-        list-style: none;
-        margin: 0px;
-        padding: 0px;
-    }
-    
-    nav li {
-        display: inline-block;
-        font-size: large;
-        margin: 5px 10px; /* Adjusted margins for spacing */
-        border-radius: 10px;
-        padding: 10px; /* Add padding for better clickability */
-        box-sizing: border-box; /* Ensures padding doesn’t affect overall width */
-        transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
-        flex-wrap: nowrap;
-    }
-    
-    nav li a {
-        color: #a7382d;
-        text-decoration: none;
-        padding: 100px;
-        display: block;
-        border-radius: 10px; /* Ensure border radius is consistent */
-        transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
-    }
-    
-    nav li:hover {
-        background-color: #a7382d;
-        color: #f2f1ef;
-        border: 2px solid #f2f1ef; /* Change the border color on hover */
-        cursor: pointer; /* Change the cursor to a pointer when hovering over the button */
-    }
-    
-    .SideButtons {
-        background-color: #f2f1ef;
-        border-radius: 10px;
-        color: #a7382d;
-        border: 2px solid #a7382d;
-        text-align: center;
-        float: right;
-        font-family: "EB Garamond", serif;
-        font-size: large;
-        padding: 10px;
-        margin: 5px;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
-    }
-    
-    .SideButtons img {
-        filter: invert(30%) sepia(90%) saturate(4000%) hue-rotate(350deg) brightness(70%) contrast(85%);
-        width: 8.8vh; 
-        height: 3.8vw; 
-    }
-    
-    .SideButtons:hover img {
-        filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(356deg) brightness(110%) contrast(115%);
-        cursor: pointer; 
-    }
-    
-    .SideButtons:hover {
-        background-color: #a7382d;
-        color: #f2f1ef;
-        border: 2px solid #f2f1ef;
-        cursor: pointer; /* Change the cursor to a pointer when hovering over the button */
-    }
-}
-
-.SideButtons img {
-    filter: invert(30%) sepia(90%) saturate(4000%) hue-rotate(350deg) brightness(70%) contrast(85%);
-    width: 8.8vh; 
-    height: 3.8vw; 
-}
-
-.SideButtons:hover img {
-    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(356deg) brightness(110%) contrast(115%);
+    border: 2px solid #f2f1ef; 
     cursor: pointer; 
+    border-radius: 10px; 
 }
-
-.SideButtons:hover {
-    background-color: #a7382d;
-    color: #f2f1ef;
-    border: 2px solid #f2f1ef;
-    cursor: pointer; /* Change the cursor to a pointer when hovering over the button */
+nav li a:hover .nav-icon { /*Really interesting, you can add a hover effect DIRECTLY to the icon itself within the hover state:*/
+    /*Hey, when you hover over the icon, change the color of the icon to white, and play the subbtle animation*/
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
+    filter: invert(100%) sepia(100%) saturate(100%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 body {
     font-family: "EB Garamond", serif;
@@ -228,18 +119,19 @@ h1, section > p  { /*Announcement element*/
 .announcement p {
     font-size: 1.2em;
     font-weight: 500;
-    line-height: 100%;
+    line-height: 150%;
     color: #333;
+    margin-top: -1.5%;
 }
 
 .announcement h1::after { /* Adds a line under the heading */
     content: "Located at 3145 Sundown Lane, Austin, TX 78749";
-    font-size: 90%;
+    font-size: 80%;
     display: block;
     width: 100%;
     height: 2px;
     background-color: #a7382d; /* Matches the border color */
-    margin: 10px 0px; /*top and bottom | left and right */
+    margin: 12px 0px; /*top and bottom | left and right */
 }
 h2 { /*Info element*/
     text-align: center;
@@ -259,14 +151,18 @@ h2::after {
     display: flex;
     /*flex-direction is automatically set to row*/
     margin: 0.5% auto; /* Center the announcement horizontally */
-    height: 70%;
-    width: 70%;
+    height: 90%;
+    width: 90%;
     justify-content: space-evenly;
     flex: 1;
     padding: 3vh;
     gap: 3vh;
 }
-
+.InfoContainer img:hover {
+    cursor: pointer; 
+    transform: scale(1.05); /* Increase the size of the image on hover */
+    transition: transform 0.3s; 
+}
 .InfoContainer article {
     border: 2px solid #a7382d; /* Adds a border around each product */
     border-radius: 10px; /* Rounds the corners of each product */
@@ -323,6 +219,7 @@ h2::after {
     background-color: #f2f1ef;
     color: #a7382d;
     border: 2px solid #a7382d;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
 }
 
 footer::before {
@@ -335,12 +232,19 @@ footer::before {
 
 footer {
     display: flex;
-    flex: 1;
-    flex-wrap: wrap; /* Allow the list items to wrap to the next line */
-    justify-content: right; /* Center the list items */
-    
+    justify-content: space-between; /*https://imgur.com/TRlNwkz*/
+    align-items: center; /*Centers the logo*/
+    background-color: #a7382d; /* Footer background color */
+    color: white;
+    padding: 10px 20px; 
+    flex-wrap: wrap; /* Allows wrapping if the screen is too small */
+    text-align: center; /* Center-align text */
 }
 
+footer div {
+    flex: 1; /* Allows each div to take up equal space */
+    padding: 5px; /* Adjust padding if necessary */
+}
 
 
 /* Responsive adjustments */
@@ -362,13 +266,15 @@ footer {
         flex-direction: column; /* Change the direction of the flex container */
         gap: 5vh; /* Adjust the gap between each article */
     }
-    .SideButtons img {
-        width: 5vh; 
-        height: 5vw; 
+    .announcement p {
+        margin-top: 10.5%;
     }
     .announcement h1::after {
         font-size: 60%;
         margin: 20px 0px; /* Adjust the margin for better spacing */
     }
-    
+    .logos { /*Unsure why !important is needed - possibily CSS is overriden? */
+        width: 95% !important;
+        height: auto !important;
+    }
 }
