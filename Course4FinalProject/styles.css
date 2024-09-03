@@ -34,11 +34,7 @@ nav ul {
     vertical-align: middle; /* Align the icon with the text */
     margin-right: 5px; /* Space between the icon and the text */
 }
-nav ul .extra_buttons > img {
-    background-color: #f2f1ef;
-    width: 1px;
-    height: 1px;
-}
+
 nav li {
     padding: 10px; /* Add padding for better clickability */
     align-items: center;
