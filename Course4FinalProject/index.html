@@ -16,44 +16,52 @@
     <header>
         <img src="EB62uoKiQiietrqCouIoXA_12f23b7df3dc41f98259e1a3a6c4d5e1_Mangata-and-Gallo-logos/Asset 2@3x.png" style="width:50%; height:auto;" alt="Mangata and Gallo's Logo">
     </header>
-    <button id = "Cart">My Bag</button>
-    <button id = "Login">Login</button>
+    <!-- TODO: Fix the buttons to be more responsive -->
     <nav> 
+        <div>
         <ul>
             <li><a href="index.html">Home Page</a></li>
             <li><a href="catalog.html">Jewelry Catalog</a></li>
             <li><a href="booking.html">Book an Appointment</a></li>
             <li><a href="catalog.html">Contact Us</a></li>
+            <li class="extra_buttons"><a href="login.html"><img src="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/log-in-icon.png" alt="Login Icon" class="nav-icon"> Login</a></li>
+            <li class="extra_buttons"><a href="cart.html"><img src="https://cdn-icons-png.flaticon.com/512/253/253298.png" alt="Cart Icon" class="nav-icon"> My Bag</a></li>
         </ul>
+        </div>
     </nav>
     <main>
-        <!--Promotion section  -->
-        <section> 
-            <h1>Official Launch of Our Retail Store in Texas!</h1>
-            <p>Shop all of our high-quality and classic pieces at our new store in Austin, Texas! Customers who purchase or select a pick-up at our retail store will recieve 15% off their purchase. Please note this deal is only good for 2 more weeks! </p>
+        <!-- Promotion section -->
+        <section class="announcement">
+            <h1>15% Off All In-Store Purchases!*</h1>
+            <p>Shop all of our high-quality and classic pieces at our new store in Austin, Texas! In-store hours are:</p>
+            <p style="color: #a7382d; margin: -3%; font-weight: bold;">Monday-Friday: 10:00 AM-6:00 PM</p>
+            <p style="color: #a7382d; margin: -3%; font-weight: bold;">Saturday: 10:00 AM - 5:00 PM</p>
+            <p style="color: #a7382d; margin: -3%; font-weight: bold;">Sunday: Closed</p>
+            <p style="font-size:medium;">*Offer valid until 12/31/2024</p>
         </section>
         <!--Info section  -->
-        <h2><div>Our Best Selling </div></h2>
+        <h2><div style="color: #a7382d;">Our Best Selling </div></h2>
     <section class="InfoContainer">
         <!-- The <article> element is designed to represent a self-contained composition that can be independently distributed or reused. 
             Each product listing can be considered a self-contained item, making <article> a more appropriate and meaningful tag to style using flexbox.
             It's also the same as a div, but without the semantics. -->
         <article>
-            <h3 style="text-align: center;">Product 1</h3>
+            <h3 style="text-align: center; font-size: 200%">Product 1</h3>
             <img src="https://images.pexels.com/photos/19869442/pexels-photo-19869442/free-photo-of-a-necklace-and-earrings-on-display-in-a-jewelry-store.jpeg" alt="Best Selling Product 1 Thumbnail">
-            <p><span>$8,599</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vitae odio suscipit at aperiam labore sequi quos numquam minus. Voluptates placeat suscipit rem ea iusto iste aspernatur perferendis nesciunt in?</p>
-        
+            <p><span style="color: white;">$8,599</span>Lorem ipsum odor amet, consectetuer adipiscing elit. Nam consequat senectus eros vestibulum amet metus potenti quam. Est etiam eu sodales nam eget lobortis venenatis. Taciti aliquet odio aliquam tempor maecenas elementum. Mus tellus facilisis urna pretium lobortis sed scelerisque inceptos. Blandit scelerisque conubia rutrum habitasse magna.</p>
+            <button class = "AddToCart">Add to Bag</button>
         </article>
         <article>
-            <h3 style="text-align: center;">Product 2</h3>
+            <h3 style="text-align: center; font-size: 200%">Product 2</h3>
             <img src="https://images.pexels.com/photos/16702313/pexels-photo-16702313/free-photo-of-photographing-jewelry-so-hard-but-so-rewarding.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Best Selling Product 2 Thumbnail">
-            <p><span>$12,499</span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis eum est, saepe officia repudiandae nam rerum, cupiditate, deserunt error cumque quaerat. Dolores vero odio velit minus dolore iusto. Facilis, sed.</p>
+            <p><span style="color: white;">$12,499</span>Lorem ipsum odor amet, consectetuer adipiscing elit. Cursus eget vivamus vestibulum dui magna purus dictumst. Risus sed suscipit suscipit dui suspendisse. Sagittis praesent himenaeos sociosqu et lacus duis ultricies venenatis inceptos. Tempus nisl sem sed suscipit pulvinar rutrum maecenas egestas. Habitasse ex nibh lobortis eget venenatis montes dui. Finibus maecenas himenaeos eu laoreet neque potenti maximus tellus.</p>
+            <button class = "AddToCart">Add to Bag</button>
         </article>
-        
         <article>
-            <h3 style="text-align: center;">Product 3</h3>
+            <h3 style="text-align: center; font-size: 200%">Product 3</h3>
             <img src="https://images.pexels.com/photos/13595433/pexels-photo-13595433.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Best Selling Product 3 Thumbnail">
-            <p><span>$2,999</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus amet accusamus assumenda necessitatibus quia soluta, beatae quaerat incidunt, ea culpa dignissimos est sit distinctio nobis harum ducimus repellat aspernatur. Odit. ipsum dolor, sit amet consectetur adipisicing elit. Nihil suscipit in eligendi harum debitis iure est distinctio minus temporibus recusandae aliquid nam fugit quo dolores officiis, fugiat quam, modi ullam?</p>
+            <p><span style="color: white;">$2,999</span> Lorem ipsum odor amet, consectetuer adipiscing elit. Duis duis habitant parturient blandit a platea quis molestie habitasse. Malesuada ex pulvinar arcu, nibh sagittis mollis felis nam. Dolor bibendum primis parturient a convallis tristique aliquet et aliquam. Nibh phasellus sagittis sodales, lorem ridiculus potenti conubia. Consequat eu tincidunt ullamcorper odio nunc. Elit efficitur eleifend metus elementum auctor semper blandit cubilia. Blandit hac diam aptent malesuada elit volutpat montes fringilla.</p>
+            <button class = "AddToCart">Add to Bag</button>
         </article>
     </section>
     </main>

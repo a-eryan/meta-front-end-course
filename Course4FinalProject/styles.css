@@ -1,74 +1,378 @@
-/* To center the logo inside the <header>, you need to apply the centering styles to the image itself, not just the header element.  */
+header {
+    background-color: #f2e8e5; /* Choose your desired background color */
+    width: 100%;
+    padding: 10px 0; /* Add some padding for spacing */
+    box-sizing: border-box; /* Ensures padding doesn't affect the total width */
+}
 header img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    filter: invert(100%);
 }
+nav {
+    background-color: #a7382d;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
 nav ul {
     list-style: none;
-    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow the list items to wrap to the next line */
+    justify-content: center; /* Center the list items */
+    overflow: hidden; /* Hide the overflow of the list items */
+}
+
+/* Ensure the nav-icon class styles the icons properly */
+.nav-icon {
+    width: 20px; /* Adjust the size as needed */
+    height: auto;
+    vertical-align: middle; /* Align the icon with the text */
+    margin-right: 5px; /* Space between the icon and the text */
+}
+nav ul .extra_buttons > img {
+    background-color: #f2f1ef;
+    width: 1px;
+    height: 1px;
 }
 nav li {
-    display: inline-block;
+    padding: 10px; /* Add padding for better clickability */
+    align-items: center;
+
+}
+
+nav li a {
+    color: #a7382d;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border: 2px solid #a7382d; /* Match the side buttons' border */
+    border-radius: 10px; /* Ensure border radius is consistent */
+    background-color: #f2f1ef; /* Match the side buttons' background color */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
+}
+
+nav li a:hover {
+    background-color: #a7382d;
+    color: #f2f1ef;
+    border: 2px solid #f2f1ef; /* Change the border color on hover */
+    cursor: pointer; /* Change the cursor to a pointer when hovering over the button */
+    border-radius: 10px; /* Ensure border radius is consistent */
+}
+
+.SideButtons {
+    background-color: #f2f1ef;
+    border-radius: 10px;
+    color: #a7382d;
+    border: 2px solid #a7382d;
+    text-align: center;
+    float: right;
+    font-family: "EB Garamond", serif;
     font-size: large;
-    margin-left: 3%;
-    margin-right: 3%;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */    header img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        filter: invert(100%);
+    }
+    
+    nav {
+        background-color: #a7382d;
+        width: 100%;
+        padding: 10px;
+        justify-content: space-between;
+        box-sizing: content-box;
+    }
+    
+    nav ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    nav li {
+        display: inline-block;
+        font-size: large;
+        margin: 5px 10px; /* Adjusted margins for spacing */
+        border-radius: 10px;
+        padding: 10px; /* Add padding for better clickability */
+        box-sizing: border-box; /* Ensures padding doesn’t affect overall width */
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
+        flex-wrap: nowrap;
+    }
+    
+    nav li a {
+        color: #a7382d;
+        text-decoration: none;
+        padding: 100px;
+        display: block;
+        border-radius: 10px; /* Ensure border radius is consistent */
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
+    }
+    
+    nav li:hover {
+        background-color: #a7382d;
+        color: #f2f1ef;
+        border: 2px solid #f2f1ef; /* Change the border color on hover */
+        cursor: pointer; /* Change the cursor to a pointer when hovering over the button */
+    }
+    
+    .SideButtons {
+        background-color: #f2f1ef;
+        border-radius: 10px;
+        color: #a7382d;
+        border: 2px solid #a7382d;
+        text-align: center;
+        float: right;
+        font-family: "EB Garamond", serif;
+        font-size: large;
+        padding: 10px;
+        margin: 5px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
+    }
+    
+    .SideButtons img {
+        filter: invert(30%) sepia(90%) saturate(4000%) hue-rotate(350deg) brightness(70%) contrast(85%);
+        width: 8.8vh; 
+        height: 3.8vw; 
+    }
+    
+    .SideButtons:hover img {
+        filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(356deg) brightness(110%) contrast(115%);
+        cursor: pointer; 
+    }
+    
+    .SideButtons:hover {
+        background-color: #a7382d;
+        color: #f2f1ef;
+        border: 2px solid #f2f1ef;
+        cursor: pointer; /* Change the cursor to a pointer when hovering over the button */
+    }
+}
+
+.SideButtons img {
+    filter: invert(30%) sepia(90%) saturate(4000%) hue-rotate(350deg) brightness(70%) contrast(85%);
+    width: 8.8vh; 
+    height: 3.8vw; 
+}
+
+.SideButtons:hover img {
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(356deg) brightness(110%) contrast(115%);
+    cursor: pointer; 
+}
+
+.SideButtons:hover {
+    background-color: #a7382d;
+    color: #f2f1ef;
+    border: 2px solid #f2f1ef;
+    cursor: pointer; /* Change the cursor to a pointer when hovering over the button */
 }
 body {
     font-family: "EB Garamond", serif;
     font-optical-sizing: auto;
     font-weight: 500;
-    font-size: large;
+    font-size: larger;
     background-color: #f2f1ef;
-    padding: 2.5%;
+    padding: 0;
+    margin: 0;
 }
-
-h1 { /*Announcement element*/
-    font-weight: 800;
-    text-align: center;
+header {
+    background-color: #a7382d; /* Change this to the desired color */
+    padding: 10px 0; /* Add some padding for spacing */
+    margin: 0;
+    width: 100%;
 }
-
-h2 { /*Info element*/
-    text-align: center;
-}
-
-.InfoContainer{
-    display: flex;
-    /*flex-direction is automatically set to row*/
-    background-color: yellowgreen;
-    align-items: center;
-    justify-content: space-around; 
-    flex: 1;
-    padding: 3vh;
-}
-
-.InfoContainer img {
+header img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 40vh; 
-    height: 40vh; 
-    object-fit: cover; /* This ensures the image covers the box without distorting */
+    width: 50%; /* Ensure your image is centered */
+}
+h1, section > p  { /*Announcement element*/
+    font-weight: 800;
+    text-align: center;
+    border-radius: 10px; /* Rounds the corners of each product */
+    padding: 2%; 
+}
+
+/* Announcement Element Styling */
+.announcement {
+    background-color: #f2e8e5; /* Light background color to distinguish the announcement */
+    border: 2px solid #a7382d; /* Adds a border around the announcement */
+    border-radius: 10px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for depth */
+    text-align: center; 
+    margin: 3.5% auto; /* Center the announcement horizontally */
+    height: 90%;
+    width: 90%;
+    align-items: center;
+}
+
+.announcement h1 {
+    font-weight: 800;
+    font-size: 2em; /* The font size will be 32px (2 times the parent's font size) */
+    margin-bottom: 0px; 
+    margin: 0px;
+    color: #a7382d; /* Matches the border color */
+}
+
+.announcement p {
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 100%;
+    color: #333;
+}
+
+.announcement h1::after { /* Adds a line under the heading */
+    content: "Located at 3145 Sundown Lane, Austin, TX 78749";
+    font-size: 90%;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #a7382d; /* Matches the border color */
+    margin: 10px 0px; /*top and bottom | left and right */
+}
+h2 { /*Info element*/
+    text-align: center;
+    font-size: 210%;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #a7382d; /* Matches the border color */
+    margin: 10px 0px; /*top and bottom | left and right */
+}
+
+.InfoContainer {
+    display: flex;
+    /*flex-direction is automatically set to row*/
+    margin: 0.5% auto; /* Center the announcement horizontally */
+    height: 70%;
+    width: 70%;
+    justify-content: space-evenly;
+    flex: 1;
+    padding: 3vh;
+    gap: 3vh;
+}
+
+.InfoContainer article {
+    border: 2px solid #a7382d; /* Adds a border around each product */
+    border-radius: 10px; /* Rounds the corners of each product */
+    padding: 2%; 
+    box-shadow: #a7382d 0px 0.0625em 0.0625em, #a7382d 0px 0.125em 0.5em, #a7382d 0px 0px 0px 1px inset;
+    height: 100%;
+    flex: 1; /* Make sure each article takes up equal space */
+
+    display: flex;
+
+    flex-direction: column;
+}
+    
+
+.InfoContainer img {
+    width: 80%; /* Adjust the width of the image */
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2.1%;
 }
 
 .InfoContainer p {
-    min-height: 25vh; /*This ensures that all containers are the same height regardless of the amount of content, which keeps them aligned. */
-    padding: 3%;
+    flex-grow: 1; /* Allow the paragraph to take up available space */
+    min-height: auto; /* Adjust as needed */
 }
-.InfoContainer h3 {
+
+.InfoContainer article span {
+    font-weight: 800;
+    font-size: 1.05em;
+    background-color: #a7382d;
+    margin-right: 5%;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+.InfoContainer article button {
+    background-color: #a7382d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 150px;  
+    height: 50px;
     display: block;
     margin-left: auto;
-    margin-right: auto;    
-    
+    margin-right: auto;
+    margin-top: auto; /* Adjust the margin-top value to move the button higher */
+    font-family: "EB Garamond", serif;
+    font-size: large;
 }
+.InfoContainer article button:hover {
+    cursor: pointer; /* Change the cursor to a pointer when hovering over the button */
+    background-color: #f2f1ef;
+    color: #a7382d;
+    border: 2px solid #a7382d;
+}
+
+footer::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #a7382d; /* Matches the border color */
+}
+
 footer {
     display: flex;
     flex: 1;
+    flex-wrap: wrap; /* Allow the list items to wrap to the next line */
+    justify-content: right; /* Center the list items */
+    
 }
 
-/*Responsive Flexbox for Devices */
-@media (max-width: 900px) {
-    .InfoContainer{
-      flex-direction: column;
+
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+    nav ul {
+        width: 100%;
+        height: auto;
+        margin: 10px 0; /* Adjust margins for better spacing */
+        text-align: center;
+        flex-direction: column;
+
     }
-  }
+    nav li {
+        padding: 0px; /*No padding due to screen's small resolution*/
+        size: 100px;
+    }
+
+    .InfoContainer {
+        flex-direction: column; /* Change the direction of the flex container */
+        gap: 5vh; /* Adjust the gap between each article */
+    }
+    .SideButtons img {
+        width: 5vh; 
+        height: 5vw; 
+    }
+    .announcement h1::after {
+        font-size: 60%;
+        margin: 20px 0px; /* Adjust the margin for better spacing */
+    }
+    
+}
