@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Little Lemon</title>
+
+  <meta property="og:title" content="Our Menu">
+  <meta property="og:type"  content="website">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:url"   content="https://littlelemon/">
+  <meta property="og:description" content="Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Little Lemon">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png">
+  </header>
+  <main>
+    <form method ="POST">
+      <div>
+      <!-- The name attribute is used when sending data in a form submission. Different controls respond differently. For example,
+      you may have several radio buttons with different id attributes, but the same name. When submitted, there is just the
+      one value in the response - the radio button you selected. -->
+        <label for = "username"> Username: </label>
+        <input type = "text" id = "username" name = "username" required minlength="2">
+      </div>
+      <div>
+        <label for="password"> Password: </label>
+        <input type="password" id="userpass" name="userpass" required minlength="2">
+      </div>
+      <!-- Although both elements deliver functionally the same result, I strongly recommend you use <button> over <input>:
+      
+        Far more explicit and readable. input suggests that the control is editable, or can be edited by the user; button is
+        far more explicit in terms of the purpose it serves
+        Easier to style in CSS; as mentioned above, FIrefox and IE have quirks in which input[type="submit"] do not display
+        correctly in some cases
+        Predictable requests: IE has verying behaviours when values are submitted in the POST/GET request to the server
+        Markup-friendly; you can nest items, for example, icons, inside the button.
+        HTML5, forward-thinking; as developers, it is our responsibility to adopt to the new spec once it is officialized.
+        HTML5, as of right now, has been official for over one year now, and has been shown in many cases to boost SEO. -->
+      <button type="submit" value="Submit"> Log In </button>
+    </form>
+  </main>
+</body>
+
+</html>
