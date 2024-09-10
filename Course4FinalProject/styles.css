@@ -251,7 +251,7 @@ footer div {
     nav ul {
         width: 100%;
         height: auto;
-        margin: 0px 0; /* Adjust margins for better spacing */
+        margin: 10px 0; /* Adjust margins for better spacing */
         text-align: center;
         flex-direction: column;
 
