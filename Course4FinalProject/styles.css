@@ -150,12 +150,11 @@ h2::after {
 .InfoContainer {
     display: flex;
     /*flex-direction is automatically set to row*/
-    margin: 0.5% auto; /* Center the announcement horizontally */
+    margin: 8% auto; /* Center the announcement horizontally */
     height: 90%;
     width: 90%;
     justify-content: space-evenly;
     flex: 1;
-    padding: 3vh;
     gap: 3vh;
 }
 .InfoContainer img:hover {
@@ -252,7 +251,7 @@ footer div {
     nav ul {
         width: 100%;
         height: auto;
-        margin: 10px 0; /* Adjust margins for better spacing */
+        margin: 0px 0; /* Adjust margins for better spacing */
         text-align: center;
         flex-direction: column;
 
