@@ -97,6 +97,8 @@ h1, section > p  { /*Announcement element*/
 
 /* Announcement Element Styling */
 .announcement {
+    position: relative;
+
     background-color: #f2e8e5; /* Light background color to distinguish the announcement */
     border: 2px solid #a7382d; /* Adds a border around the announcement */
     border-radius: 10px; 
@@ -106,6 +108,28 @@ h1, section > p  { /*Announcement element*/
     height: 90%;
     width: 90%;
     align-items: center;
+}
+
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #a7382d;
+    font-size: larger;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.close-button:hover {
+    background-color: #a7382d;
+    color: white;
 }
 
 .announcement h1 {
@@ -150,31 +174,40 @@ h2::after {
 .InfoContainer {
     display: flex;
     /*flex-direction is automatically set to row*/
-    margin: 2% auto; /* Center the announcement horizontally */
+    margin: 3% auto 3%; /* top | horizontal | bottom */
     height: 90%;
     width: 90%;
     justify-content: space-evenly;
-    flex: 1;
+    /* flex: 1;  
+    flex: 1 is needed when you want an element to grow and take up available space within a flex container. 
+    Since .InfoContainer is the container itself, not a flex item, the flex: 1 property doesn't have any effect here.
+    */
     gap: 3vh;
 }
+
+.InfoContainer h3 {
+    color: #333333; 
+    text-align: center; 
+    font-size: 200%
+}
+
+
 .InfoContainer img:hover {
     cursor: pointer; 
-    transform: scale(1.05); /* Increase the size of the image on hover */
-    transition: transform 0.3s; 
+    transform: scale(1.07); /* Increase the size of the image on hover */
+    transition: all 0.3s;
 }
-.InfoContainer article {
+.InfoContainer article { 
+    display: flex;
+    flex: 1; /* Make sure each flex item takes up equal space */
+    flex-direction: column;
+    gap: 0.5rem; /* Consistent spacing between all elements */
+    padding: 2rem;   
     border: 2px solid #a7382d; /* Adds a border around each product */
     border-radius: 10px; /* Rounds the corners of each product */
-    padding: 2%; 
     box-shadow: #a7382d 0px 0.0625em 0.0625em, #a7382d 0px 0.125em 0.5em, #a7382d 0px 0px 0px 1px inset;
-    height: 100%;
-    flex: 1; /* Make sure each article takes up equal space */
-
-    display: flex;
-
-    flex-direction: column;
 }
-    
+  
 
 .InfoContainer img {
     width: 80%; /* Adjust the width of the image */
@@ -183,7 +216,7 @@ h2::after {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 2.1%;
+    border-radius: 10px;
 }
 
 .InfoContainer p {
@@ -237,7 +270,6 @@ footer {
     color: white;
     padding: 10px 20px; 
     flex-wrap: wrap; /* Allows wrapping if the screen is too small */
-    text-align: center; /* Center-align text */
 }
 
 footer div {
@@ -263,7 +295,11 @@ footer div {
 
     .InfoContainer {
         flex-direction: column; /* Change the direction of the flex container */
-        gap: 5vh; /* Adjust the gap between each article */
+        height: 93%;
+        width: 93%; 
+    }
+    .InfoContainer article {
+        margin: 0% auto 3%; /* top | horizontal | bottom  <--- applied proper padding */
     }
     .announcement p { 
         margin: 5.5%;
@@ -279,5 +315,5 @@ footer div {
 }
 
 @media (min-width: 1200px) {
-    /*TODO: Make it more desktop friendly*/
+    /*TODO: Make it even more desktop friendly*/
 }
