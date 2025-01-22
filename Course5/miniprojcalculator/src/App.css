@@ -1,0 +1,45 @@
+* {
+    font-family: sans-serif;
+      /* Center vertically and horizontally */
+      text-align: center;
+
+  }
+  p, result {
+    font-size: 190%;
+    font-weight: bold;
+  }
+  input, button {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center
+  }
+  input {
+    display: block;
+    margin: 0 auto 20px;
+    text-align: center;  /* Centers the text inside */
+    border: 2px solid black;  /*overwrites default border*/ 
+}
+  button {
+    background: #ffaf47;
+    color: white;
+    margin: 0.5%;
+    border: 2px solid #ff9306;   /*overwrites default border*/
+
+  }
+  button:hover {
+    transform: scale(1.05); /* Increase the size of the image on hover */
+    transition: 0.5s;
+    background: #ffb875;
+
+  }
+  button:nth-last-child(2), button:nth-last-child(1) { /*For reset input and rest result*/ 
+    background: #ff6347;
+    border: 2px solid #ff2c06;   /*overwrites default border*/
+  }
+  button:nth-last-child(2):hover, button:nth-last-child(1):hover { /*For reset input and rest result*/ 
+    transition: 0.99s;
+    background: #ff8a75;
+  }  
+  
