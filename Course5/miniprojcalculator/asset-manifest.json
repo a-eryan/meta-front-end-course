@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/meta-front-end-course/Course5/miniprojcalculator/static/css/main.534df271.css",
+    "main.js": "/meta-front-end-course/Course5/miniprojcalculator/static/js/main.c9c97d35.js",
+    "index.html": "/meta-front-end-course/Course5/miniprojcalculator/index.html",
+    "main.534df271.css.map": "/meta-front-end-course/Course5/miniprojcalculator/static/css/main.534df271.css.map",
+    "main.c9c97d35.js.map": "/meta-front-end-course/Course5/miniprojcalculator/static/js/main.c9c97d35.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.534df271.css",
+    "static/js/main.c9c97d35.js"
+  ]
+}
