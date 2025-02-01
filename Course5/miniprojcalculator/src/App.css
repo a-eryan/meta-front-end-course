@@ -1,45 +1,98 @@
 * {
-    font-family: sans-serif;
+    font-family: "Poppins";
       /* Center vertically and horizontally */
       text-align: center;
+      align-items: center;
+  }
 
+  body{
+    background-color: #fff9e9;
+    color: #1a1a1a;
   }
-  p, result {
-    font-size: 190%;
-    font-weight: bold;
+  .dark { /*dark class for dark mode*/
+    background-color: #1a1a1a;
+    color: white;
+    input {
+      background: #1a1a1a;
+      color:white;
+    }
+    button {
+      transition: 0.99s; /*smoooth transition towards theme switching, switches to .dark, and it'll instantly play*/
+    }
+    button:hover {
+      transform: scale(1.05); /* Increase the size of the image on hover */
+      transition: 0.99s;
+      background: #725133;
+    }
+    button:nth-last-child(2), button:nth-last-child(1) {
+      background: #4a47ff;
+      color:white;
+      border: 2px solid #061fff;
+    }
+    button:nth-last-child(2):hover, button:nth-last-child(1):hover { /*Selects second-to-last, last in the form, and last in the parent container (the App div)*/ 
+      transition: 0.99s;
+      background: #374379;
+    }
+    input {
+      transition: 0.99s; /*smoooth transition towards theme switching, switches to .dark, and it'll instantly play*/
+      background: #0f0f0f;
+      border: solid #f1f1f1;
+      color: white;
+    }
+    }
+
+  p {
+    font-size: 180%;
   }
+
   input, button {
-    font-size: 1rem;
-    padding: 10px;
+    font-size: 1.5rem;
+    padding: 12px;
     border-radius: 15px;
     align-items: center;
     justify-content: center
   }
+
   input {
-    display: block;
+    display: flex;
+    flex: 1;
     margin: 0 auto 20px;
     text-align: center;  /* Centers the text inside */
     border: 2px solid black;  /*overwrites default border*/ 
-}
+    background: #f1f1f1;
+  }
   button {
     background: #ffaf47;
     color: white;
     margin: 0.5%;
     border: 2px solid #ff9306;   /*overwrites default border*/
-
   }
+
   button:hover {
     transform: scale(1.05); /* Increase the size of the image on hover */
-    transition: 0.5s;
+    transition: 0.3s;
     background: #ffb875;
-
   }
-  button:nth-last-child(2), button:nth-last-child(1) { /*For reset input and rest result*/ 
-    background: #ff6347;
+
+  button:nth-last-child(2), button:nth-last-child(1){ /*Selects second-to-last, last in the form, and last in the parent container (the App div)*/ 
+    background: #fb6145;
     border: 2px solid #ff2c06;   /*overwrites default border*/
   }
+
   button:nth-last-child(2):hover, button:nth-last-child(1):hover { /*For reset input and rest result*/ 
     transition: 0.99s;
     background: #ff8a75;
-  }  
+  }
+
+  footer {
+    font-size: 24px;
+    margin: 2.5%;
+  }
   
+
+  @media (max-width: 767px) {
+    form button:nth-last-child(3), form button:nth-last-child(4), form button:nth-last-child(5), form button:nth-last-child(6) {
+      margin: 2.5%;
+      padding: 7%;
+    }
+  }
