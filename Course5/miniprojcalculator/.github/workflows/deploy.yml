@@ -16,7 +16,7 @@ jobs:
       - name: Build
         working-directory: ./Course5/miniprojcalculator
         env:
-          REACT_APP_API_KEY: ${{ secrets.COURSE_5_API_KEY }}
+          COURSE_5_API_KEY: ${{ secrets.COURSE_5_API_KEY }}
         run: npm run build
         
       - name: Deploy

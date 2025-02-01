@@ -22,7 +22,7 @@ function App() {
   // setResult: a function to update that variable
   // Although we don't assign e, React creates and passes this event object whenever the button is clicked. (applies to all event handlers) 
   const [fact, setFact] = useState(null);
-  const funFactURL = `https://numbersapi.p.rapidapi.com/random/trivia?min=0&max=899`;
+  const funFactURL = `https://numbersapi.p.rapidapi.com/random/trivia?min=0&max=999`;
 
   const options = {
     method: 'GET',
