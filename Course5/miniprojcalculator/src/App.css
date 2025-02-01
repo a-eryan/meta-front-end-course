@@ -60,6 +60,7 @@
     text-align: center;  /* Centers the text inside */
     border: 2px solid black;  /*overwrites default border*/ 
     background: #f1f1f1;
+    size: 20px;
   }
   button {
     background: #ffaf47;
@@ -96,6 +97,6 @@
       padding: 7%;
     }
     input {
-      size: 80%;
+      width: 80%;
     }
   }
