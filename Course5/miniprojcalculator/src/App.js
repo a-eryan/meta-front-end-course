@@ -27,7 +27,7 @@ function App() {
   const options = {
     method: 'GET',
     headers: {
-      'x-rapidapi-key': process.env.REACT_APP_API_KEY,
+      'x-rapidapi-key': process.env.COURSE_5_API_KEY,
       'x-rapidapi-host': 'numbersapi.p.rapidapi.com'
     }
   };

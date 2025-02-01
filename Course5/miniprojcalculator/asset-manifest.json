@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/meta-front-end-course/Course5/miniprojcalculator/static/css/main.ba11119a.css",
-    "main.js": "/meta-front-end-course/Course5/miniprojcalculator/static/js/main.02bd3bba.js",
+    "main.css": "/meta-front-end-course/Course5/miniprojcalculator/static/css/main.029572d0.css",
+    "main.js": "/meta-front-end-course/Course5/miniprojcalculator/static/js/main.56374eb0.js",
     "index.html": "/meta-front-end-course/Course5/miniprojcalculator/index.html",
-    "main.ba11119a.css.map": "/meta-front-end-course/Course5/miniprojcalculator/static/css/main.ba11119a.css.map",
-    "main.02bd3bba.js.map": "/meta-front-end-course/Course5/miniprojcalculator/static/js/main.02bd3bba.js.map"
+    "main.029572d0.css.map": "/meta-front-end-course/Course5/miniprojcalculator/static/css/main.029572d0.css.map",
+    "main.56374eb0.js.map": "/meta-front-end-course/Course5/miniprojcalculator/static/js/main.56374eb0.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba11119a.css",
-    "static/js/main.02bd3bba.js"
+    "static/css/main.029572d0.css",
+    "static/js/main.56374eb0.js"
   ]
 }
