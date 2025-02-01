@@ -1,0 +1,25 @@
+name: Build and Deploy
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Install Dependencies
+        working-directory: ./Course5/miniprojcalculator
+        run: npm install
+        
+      - name: Build
+        working-directory: ./Course5/miniprojcalculator
+        env:
+          REACT_APP_API_KEY: ${{ secrets.API_KEY }}
+        run: npm run build
+        
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: Course5/miniprojcalculator/build
