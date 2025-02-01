@@ -24,27 +24,25 @@ function App() {
   const [fact, setFact] = useState(null);
   const funFactURL = `https://numbersapi.p.rapidapi.com/random/trivia?min=0&max=999`;
 
-  const options = {
-    method: 'GET',
-    headers: {
-      'x-rapidapi-key': process.env.COURSE_5_API_KEY,
-      'x-rapidapi-host': 'numbersapi.p.rapidapi.com'
-    }
-  };
-
-
   useEffect(() => {
+    const options = {
+        method: 'GET',
+        headers: {
+            'x-rapidapi-key': 'b7991f3deemsh15e70cc409a0727p1aeba2jsn7465f6d0f906',
+            'x-rapidapi-host': 'numbersapi.p.rapidapi.com'
+        }
+    }; //fixes the warning about missing dependencies
     const fetchFact = async () => {
-      try {
-        const response = await fetch(funFactURL, options);
-        const text = await response.text();  //using text() instead of json() since it wasn't even a JSON object 
-        setFact(text);
-      } catch (error) {
-        console.error("Error fetching fact:", error);
-      }
+        try {
+            const response = await fetch(funFactURL, options);
+            const text = await response.text();
+            setFact(text);
+        } catch (error) {
+            console.error("Error fetching fact:", error);
+        }
     }
     fetchFact();
-}, []);
+  }, [funFactURL]); // options is now defined inside useEffect
   
   
   function plus(e) { 
