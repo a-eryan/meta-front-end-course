@@ -22,13 +22,21 @@ function App() {
   // setResult: a function to update that variable
   // Although we don't assign e, React creates and passes this event object whenever the button is clicked. (applies to all event handlers) 
   const [fact, setFact] = useState(null);
-  const funFactURL = `http://numbersapi.com/${Math.floor(Math.random() * 1000)}`;
+  const funFactURL = `https://numbersapi.p.rapidapi.com/random/trivia?min=0&max=999`;
+
+  const options = {
+    method: 'GET',
+    headers: {
+      'x-rapidapi-key': 'b7991f3deemsh15e70cc409a0727p1aeba2jsn7465f6d0f906',
+      'x-rapidapi-host': 'numbersapi.p.rapidapi.com'
+    }
+  };
 
 
   useEffect(() => {
     const fetchFact = async () => {
       try {
-        const response = await fetch(funFactURL);
+        const response = await fetch(funFactURL, options);
         const text = await response.text();  //using text() instead of json() since it wasn't even a JSON object 
         setFact(text);
       } catch (error) {
